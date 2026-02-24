@@ -23,8 +23,14 @@ class Gitagent < Formula
   depends_on "python@3.11"
 
   def install
-    venv = virtualenv_create(libexec, "python3.11")
-    venv.pip_install_and_link(buildpath)
+    python = Formula["python@3.11"].opt_bin/"python3.11"
+    venv = libexec/"venv"
+
+    system python, "-m", "venv", venv
+    system "#{venv}/bin/pip", "install", "--no-cache-dir", "-r", "requirements.txt"
+    system "#{venv}/bin/pip", "install", "--no-cache-dir", "--no-deps", "."
+
+    bin.install_symlink "#{venv}/bin/gitagent"
   end
 
   def caveats
