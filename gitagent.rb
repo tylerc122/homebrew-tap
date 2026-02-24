@@ -11,6 +11,7 @@
 #   3. Update `url` and `sha256` below
 
 class Gitagent < Formula
+  include Language::Python::Virtualenv
   desc "Autonomous CI/CD remediation — watches CI fail, figures out why, fixes it, opens a PR"
   homepage "https://github.com/tylerc122/git_agent"
   url "https://github.com/tylerc122/git_agent/archive/refs/tags/v1.0.0.tar.gz"
