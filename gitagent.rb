@@ -14,7 +14,7 @@ class Gitagent < Formula
   desc "Autonomous CI/CD remediation — watches CI fail, figures out why, fixes it, opens a PR"
   homepage "https://github.com/tylerc122/git_agent"
   url "https://github.com/tylerc122/git_agent/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
+  sha256 "734ed89b1d93ecc35dd93adf3b05c0b547ac539c3466999c0b37530eb05513e4"
   license "MIT"
 
   head "https://github.com/tylerc122/git_agent.git", branch: "main"
